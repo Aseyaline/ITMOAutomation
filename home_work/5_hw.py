@@ -10,14 +10,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome()
-driver.get("https://www.saucedemo.com/")
+def new_function():
+    driver = webdriver.Chrome()
+    driver.get("https://www.saucedemo.com/")
 
-elem = driver.find_elements(By.CSS_SELECTOR, "#user-name, #password, #login-button")
-if len(elem) == 3:
-    print('Элементы найдены')
-else:
-    print('Элементы не найдены')
+    elem = driver.find_elements(By.CSS_SELECTOR, "#user-name, #password, #login-button")
+    if len(elem) == 3:
+        print('Элементы найдены')
+    else:
+        print('Элементы не найдены')
 
 
 # 2. CSS - Перейдите на тренировочную площадку, решите до 14-го задания включительно
